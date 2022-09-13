@@ -190,11 +190,11 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 let computer = Math.random();
 
   if(computer < 0.34) {
-    return = "rock";
-  }else if (computer >= 0.34 && <= 0.74) {
-    retunr = "paper";
-  }else if(computer >= 0.75 && <= 1.0) {
-    return = "scissors";
+    computer = "rock";
+  }else if (computer <= .67) {
+    computer = "paper";
+  }else if(computer >= 0.68) {
+    computer = "scissors";
   }
 
 
@@ -202,21 +202,22 @@ function game(user, computer){
   if(user === computer){
     return `it's a tie`;
   }else if (user === 'rock' && computer === 'scissors') {
-    return = 'you win!';
+    return  `you win!`;
   }else if (user === 'rock' && computer === 'paper') {
-    return = 'you lose!';
+    return  `you lose!`;
   }else if (user === 'paper' && computer === 'scissors') {
-    return = 'you lose!';
+    return `you lose!`;
   }else if (user === 'paper' && computer === 'rock') {
-    return = 'you win!';
+    return `you win!`;
   }else if (user === 'scissors' && computer === 'rock') {
-    return = 'you lose!';
+    return `you lose!`;
   }else if (user === 'scissors' && computer === 'paper') {
-    return = 'you win!';
+    return `you win!`;
   }else {
-    return = "try again"
+    return `try again`;
   }
 }
+console.log('task4', game('paper', computer))
 
 
 
