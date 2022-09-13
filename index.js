@@ -91,10 +91,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogyears(age) {
+function dogYears(age) {
   return age * 7 ;
 }
-console.log("task 2", dogyears(10))
+console.log("task 2", dogYears(10))
 
 
 
@@ -148,22 +148,21 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 function hungryDog(weight, age){
   if (age >= 1 && weight <= 5) {
       return weight * 0.05;
-  }else if (age >=1 && weight >=6 && weight <= 10) {
+  }else if (age >=1 && weight <= 10) {
       return weight * 0.04;
-  }else if (age >= 1 && weight <=11 && weight < 15) {
+  }else if (age >= 1 && weight <= 15) {
       return weight * 0.03;
-  }else if (age >=1 && weight > 15) {
+  }else if (age >=1 && weight >= 16) {
       return weight * 0.02;
   }else if (age < 1 && age >= 0.583){
     return weight * 0.04;
-  }else if (age <1 && age >=0.583 && age >= 0.333) {
+  }else if (age <1 && age >= 0.333) {
       return weight * 0.05;
-  }else if (age < 0.333){
+  }else if (age <1 && age >= 0.166){
     return weight * 0.10;
-  }else {
-    return"please try again"
-  }}
-console.log(hungryDog(15, 1));
+  }
+  }
+console.log(hungryDog(4, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -233,10 +232,10 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  return kilometers * .62137
+  return kilometers * 0.621371;
 
 }
-console.log('Task 5a ', miles(5), "miles" )
+console.log(miles(10));
 
 
 
@@ -270,7 +269,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(bottle){
   for(let i = bottle; i >0; i--){
-     return `${bottle} of soda on the wall, ${bottle} bottles of soda, take one down pass it around ${bottle - 1} bottles of soda on the wall`
+     return `${bottle} bottles of soda on the wall, ${bottle} bottles of soda, take one down pass it around ${bottle - 1} bottles of soda on the wall`
 }
 }
 console.log(annoyingSong(99));
@@ -291,10 +290,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if(score >= 90) {
+    return 'you got an A';
+  }else if(score >= 80){ 
+    return 'you got a B';
+  }else if(score >= 70){
+    return 'you got a C';
+  }else if(score >= 60){
+    return 'you got a D';
+  }else {
+    return 'you got an F'
+  }
+    
 }
-
+console.log(grade(100));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
